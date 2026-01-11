@@ -19,6 +19,10 @@
                     @csrf
                     <button class="btn btn-light btn-sm">Logout</button>
                 </form>
+                <a href="{{ route('my.bookings') }}" class="btn btn-light btn-sm me-2">
+                    My Bookings
+                </a>
+
             @else
                 <a href="{{ route('login') }}" class="btn btn-light btn-sm me-2">Login</a>
                 <a href="{{ route('register') }}" class="btn btn-light btn-sm">Register</a>

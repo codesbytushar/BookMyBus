@@ -24,8 +24,8 @@
                 </div>
 
                 <div>
-                    <a href="#" class="btn btn-success">
-                        Select Seat
+                    <a href="{{ route('booking.form', ['busId' => $bus->id, 'date' => request('date')]) }}" class="btn btn-success">
+                        Book Now
                     </a>
                 </div>
             </div>
