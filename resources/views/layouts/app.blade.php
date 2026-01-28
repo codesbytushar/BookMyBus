@@ -114,6 +114,29 @@
         </nav>
         @endif
 
+        <div class="main-panel {{ $isAuthPage ? 'ms-0 w-100' : '' }}">
+            <div class="content-wrapper {{ $isAuthPage ? 'p-0' : '' }}">
+
+                {{-- page content --}}
+                @yield('content')
+
+            </div>
+
+            {{-- footer --}}
+            @if(!$isAuthPage)
+            <footer class="footer">
+                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted">
+                        © {{ date('Y') }} BookMyBus. All rights reserved.
+                    </span>
+                </div>
+            </footer>
+            @endif
+
+        </div>
+    </div>
+</div>
+
 <script src="{{ asset('bookingTheme/vendors/js/vendor.bundle.base.js') }}"></cript>
 <script src="{{ asset('bookingTheme/js/off-canvas.js') }}"></script>
 <script src="{{ asset('bookingTheme/js/template.js') }}"></script>
