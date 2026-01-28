@@ -28,6 +28,59 @@
 
 <body class="with-welcome-text">
 
+<div class="container-scroller">
+
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-center flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+            <a class="navbar-brand fw-bold text-primary ms-3 d-flex align-items-center"
+               href="/"
+               style="height:70px;font-size:22px;">
+                🚌 <span class="ms-2">BookMyBus</span>
+            </a>
+        </div>
+
+        <div class="navbar-menu-wrapper d-flex align-items-center ms-auto pe-4">
+            <ul class="navbar-nav ms-auto d-flex align-items-center">
+
+                @auth
+                    <li class="nav-item nav-profile-text me-3">
+                        <span class="fw-semibold text-dark">
+                            Hi, {{ auth()->user()->name }}
+                        </span>
+                    </li>
+
+                    <li class="nav-item me-2">
+                        <a href="{{ route('my.bookings') }}" class="btn btn-primary btn-sm rounded-1">
+                            My Bookings
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button class="btn btn-danger btn-sm rounded-1">
+                                Logout
+                            </button>
+                        </form>
+                    </li>
+                @else
+                    <li class="nav-item me-2">
+                        <a href="{{ route('login') }}" class="btn btn-primary btn-sm rounded-1">
+                            Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('register') }}" class="btn btn-primary btn-sm rounded-1">
+                            Register
+                        </a>
+                    </li>
+                @endauth
+
+            </ul>
+        </div>
+    </nav>
+
 
 
 <script src="{{ asset('bookingTheme/vendors/js/vendor.bundle.base.js') }}"></cript>
