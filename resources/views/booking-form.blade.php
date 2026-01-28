@@ -12,6 +12,26 @@
                     Passenger Details
                 </h4>
 
+                {{-- bus summary --}}
+                <div class="bg-light rounded p-3 mb-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="mb-1 fw-bold">{{ $bus->bus_name }}</h5>
+                            <p class="mb-0 text-muted">
+                                {{ $bus->from_city }} → {{ $bus->to_city }}
+                            </p>
+                            <small class="text-muted">
+                                Departure: {{ $bus->departure_time }}
+                            </small>
+                        </div>
+                        <div class="text-end">
+                            <h5 class="text-primary fw-bold mb-0">
+                                ₹{{ $bus->price }}
+                            </h5>
+                            <small class="text-muted">per seat</small>
+                        </div>
+                    </div>
+                </div>
 
                 {{-- booking form --}}
                 <form method="POST" action="{{ route('booking.store') }}">
