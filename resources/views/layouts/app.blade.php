@@ -81,7 +81,38 @@
         </div>
     </nav>
 
+   <div class="container-fluid page-body-wrapper">
 
+        @if(!$isAuthPage)
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">Home</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('search.buses') }}">
+                        <i class="mdi mdi-bus menu-icon"></i>
+                        <span class="menu-title">Book Bus</span>
+                    </a>
+                </li>
+
+                @auth
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('my.bookings') }}">
+                        <i class="mdi mdi-ticket-confirmation menu-icon"></i>
+                        <span class="menu-title">My Bookings</span>
+                    </a>
+                </li>
+                @endauth
+
+            </ul>
+        </nav>
+        @endif
 
 <script src="{{ asset('bookingTheme/vendors/js/vendor.bundle.base.js') }}"></cript>
 <script src="{{ asset('bookingTheme/js/off-canvas.js') }}"></script>
