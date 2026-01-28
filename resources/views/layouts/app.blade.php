@@ -28,6 +28,10 @@
 
 <body class="with-welcome-text">
 
+@php
+    $isAuthPage = request()->is('login') || request()->is('register');
+@endphp
+
 <div class="container-scroller">
 
     <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-center flex-row">
@@ -81,7 +85,7 @@
         </div>
     </nav>
 
-   <div class="container-fluid page-body-wrapper">
+    <div class="container-fluid page-body-wrapper">
 
         @if(!$isAuthPage)
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
