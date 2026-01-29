@@ -54,7 +54,16 @@
                                 </p>
                             </div>
 
-
+                            <div class="col-md-4 mb-2">
+                                <p class="mb-1 text-muted">Seats Booked</p>
+                                <p class="fw-semibold mb-0">
+                                    {{ $booking->seat_number }}
+                                    <span class="text-muted">
+                                        ({{ $booking->seat_count }} seat{{ $booking->seat_count > 1 ? 's' : '' }})
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
