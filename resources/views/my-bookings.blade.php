@@ -39,7 +39,13 @@
 
                         <hr>
 
-
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <p class="mb-1 text-muted">Passenger</p>
+                                <p class="fw-semibold mb-0">
+                                    {{ $booking->passenger_name }}
+                                </p>
+                            </div>
 
 
 
