@@ -15,5 +15,6 @@ class CheckLogin
                 ->with('error', 'Please login to continue');
         }
 
+        return $next($request);
     }
 }
