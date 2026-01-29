@@ -65,12 +65,6 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
-        if (Auth::attempt($request->only('email', 'password'))) {
-            $request->session()->regenerate();
-
-            return redirect()->intended(route('search.buses'));
-        }
-
         return back()->with('error', 'Invalid email or password.');
     }
 
