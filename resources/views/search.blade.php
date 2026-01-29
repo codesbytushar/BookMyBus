@@ -27,7 +27,19 @@
                                  style="z-index:1000;"></div>
                         </div>
 
-
+                        <div class="col-md-4 position-relative">
+                            <label class="form-label">To</label>
+                            <input type="text"
+                                   name="to"
+                                   id="toCity"
+                                   class="form-control"
+                                   placeholder="Enter City"
+                                   autocomplete="off"
+                                   required>
+                            <div class="list-group position-absolute w-100 d-none"
+                                 id="toSuggestions"
+                                 style="z-index:1000;"></div>
+                        </div>
 
 
 
