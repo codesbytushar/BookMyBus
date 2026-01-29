@@ -47,6 +47,12 @@
                                 </p>
                             </div>
 
+                            <div class="col-md-4 mb-2">
+                                <p class="mb-1 text-muted">Journey Date</p>
+                                <p class="fw-semibold mb-0">
+                                    {{ \Carbon\Carbon::parse($booking->journey_date)->format('d M Y') }}
+                                </p>
+                            </div>
 
 
 
