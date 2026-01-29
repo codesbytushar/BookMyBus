@@ -41,7 +41,14 @@
                                  style="z-index:1000;"></div>
                         </div>
 
-
+                        <div class="col-md-4">
+                            <label class="form-label">Journey Date</label>
+                            <input type="date"
+                                   name="date"
+                                   class="form-control"
+                                   min="{{ date('Y-m-d') }}"
+                                   required>
+                        </div>
 
                     </div>
 
