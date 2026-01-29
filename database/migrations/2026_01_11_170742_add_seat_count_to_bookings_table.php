@@ -11,7 +11,9 @@ return new class extends Migration
      */
     public function up()
     {
-
+        Schema::table('bookings', function (Blueprint $table) {
+            $table->integer('seat_count')->after('passenger_age');
+        });
     }
     /**
      * Reverse the migrations.
